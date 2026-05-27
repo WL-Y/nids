@@ -1,0 +1,10 @@
+held_out_class,held_out_count,rank,predicted_as,count
+Worms,32,1,Exploits,23
+Worms,32,2,Generic,6
+Worms,32,3,Fuzzers,3
+Analysis,245,1,Exploits,226
+Analysis,245,2,DoS,8
+Analysis,245,3,Fuzzers,6
+Shellcode,476,1,Exploits,147
+Shellcode,476,2,Backdoor,137
+Shellcode,476,3,Fuzzers,72

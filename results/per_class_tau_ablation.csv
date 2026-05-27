@@ -1,0 +1,5 @@
+method,held_out,tau,coverage,unknown_rejection_rate,known_false_rejection_rate
+global_tau,"Worms, Analysis, Shellcode",0.85,0.9572,0.9947,0.0413
+per_class_tau,"Worms, Analysis, Shellcode",per-class,0.9878,0.5046,0.0114
+global_tau,"Backdoor, DoS, Fuzzers",0.85,0.9695,0.9032,0.0138
+per_class_tau,"Backdoor, DoS, Fuzzers",per-class,0.9843,0.4374,0.0076

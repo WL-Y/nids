@@ -1,0 +1,2 @@
+comparison,condition,statistic,p_value,significant,alpha
+Strategy 2 vs Baseline,Clean,49.83,0.0,yes,0.05

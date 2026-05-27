@@ -1,0 +1,2 @@
+Method,Clean Full F1,Coverage,Accepted F1,Stress A F1,Stress B F1,Stress C F1,Rejection Rate,Detection AUROC,full_stress_b,stress_b_n_samples,stress_b_precision,stress_b_recall,stress_b_fpr,stress_b_fnr
+Strategy 2 (M=5 ensemble),0.6674,1.000 (no rejection),N/A,0.7353,0.2588,0.2526,N/A,0.8529,True,20115529,0.1582,0.7103,0.5613,0.2897

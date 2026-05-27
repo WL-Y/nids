@@ -1,0 +1,2 @@
+Method,Clean Full F1,Coverage,Accepted F1,Stress A F1,Stress B F1,Stress C F1,Rejection Rate,Detection AUROC
+Strategy 1 (tau=0.99),0.1157,0.9459,0.8667,0.9574,0% cov / undef.,0% cov / undef.,0.0541,0.9851

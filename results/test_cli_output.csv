@@ -1,0 +1,11 @@
+flow_index,prediction,confidence,disagreement,decision
+0,Benign,1.0,,ALERT (above threshold)
+1,Benign,1.0,,ALERT (above threshold)
+2,Benign,1.0,,ALERT (above threshold)
+3,Benign,1.0,,ALERT (above threshold)
+4,Benign,1.0,,ALERT (above threshold)
+5,Benign,1.0,,ALERT (above threshold)
+6,Benign,1.0,,ALERT (above threshold)
+7,Benign,1.0,,ALERT (above threshold)
+8,Benign,1.0,,ALERT (above threshold)
+9,UNKNOWN,0.43684070141204034,,FLAG FOR REVIEW (below threshold)

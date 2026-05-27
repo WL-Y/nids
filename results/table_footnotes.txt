@@ -1,0 +1,48 @@
+Footnotes for strategies_comparison.csv
+
+============================================================
+Column definitions
+============================================================
+
+  Clean Full F1         Macro-F1 on full clean UNSW test set.
+                         - Baseline/S2: standard Macro-F1.
+                         - Strategy 1: Macro-F1 treating REJECT as an error class.
+                           This is intentionally low (0.1157) because rejecting 5.4% of
+                           samples counts all of them as wrong.
+
+  Coverage              Fraction of test samples accepted (not rejected).
+                         - Strategy 1 only; N/A for methods without rejection.
+
+  Accepted F1           Macro-F1 on accepted (non-rejected) samples only.
+                         - This is a selective metric: it measures performance on the
+                           subset the strategy chooses to answer, NOT full-set robustness.
+
+  Stress A F1           Known-class Macro-F1 under open-set conditions (held-out unknown
+                         classes). For Strategy 1 this is accepted-only F1 after rejection
+                         (selective metric). For Strategy 2 this is majority-vote F1.
+
+  Stress B F1           Binary F1 on CICIDS2018 cross-dataset evaluation.
+                         "0% cov / undef." means zero coverage: all CICIDS samples were
+                         rejected at that tau, making accepted-sample metrics undefined.
+
+  Stress C F1           Macro-F1 under Gaussian noise (sigma=0.1).
+                         "0% cov / undef." means rejection removed all noisy samples.
+
+============================================================
+Key Interpretive Warnings
+============================================================
+
+1. Strategy 1 metrics are SELECTIVE (accepted-only) unless labeled "Full F1".
+   Accepted F1 and Stress A F1 for Strategy 1 measure performance on the subset
+   the model chooses to answer, not full-set robustness. Compare with Coverage
+   and Full F1 to see the complete picture.
+
+2. Stress B "0% cov / undef." is a FAILURE MODE, not "not tested".
+   Strategy 1 at tau=0.99 rejects ALL target-domain samples (coverage=0.0000),
+   resulting in undefined accepted-sample metrics. This is a failure mode under
+   distribution shift: the confidence threshold learned on UNSW does not transfer.
+   Strategy 2 majority vote F1 (0.2588) is nearly identical to baseline (0.2593).
+   Neither strategy solves cross-dataset shift.
+
+3. Primary metric: Macro-F1 (not Weighted-F1).
+   With 94.6% Benign, Weighted-F1 is dominated by the majority class.

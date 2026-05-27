@@ -1,0 +1,4 @@
+Method,Coverage,Precision,Recall,F1,FPR,FNR,Delta F1 (vs UNSW),Note
+Baseline RF,1.0,0.1585,0.7113,0.2593,0.5607,0.2887,0.4181,Full CICIDS chunked evaluation
+Strategy 1 Threshold,0.0,,,,,,,All samples rejected at tau=0.99
+Strategy 2 Ensemble,1.0,0.1582,0.7103,0.2588,0.5613,0.2897,0.4186,Single-pass majority vote; no meaningful improvement

@@ -1,0 +1,13 @@
+type,level,macro_f1
+noise,sigma=0.1,0.2688
+noise,sigma=0.5,0.2036
+noise,sigma=1.0,0.1682
+masking,p=0.1,0.6336
+masking,p=0.25,0.5214
+masking,p=0.5,0.2959
+dropout_top,k=2,0.5379
+dropout_top,k=4,0.4151
+dropout_top,k=6,0.266
+dropout_bottom,k=2,0.6774
+dropout_bottom,k=4,0.6758
+dropout_bottom,k=6,0.674

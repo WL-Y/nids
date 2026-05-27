@@ -1,0 +1,2 @@
+strategy,ensemble_size,stress_b_n_samples,stress_b_accuracy,stress_b_precision,stress_b_recall,stress_b_f1,stress_b_fpr,stress_b_fnr,stress_b_tp,stress_b_tn,stress_b_fp,stress_b_fn,full_stress_b,ensemble_train_frac,ensemble_n_jobs,chunk_size
+ensemble_disagreement_single_pass,5,20115529,0.47379489746454095,0.15818886473622504,0.7103225302904415,0.2587533457975131,0.5613291999498019,0.28967746970955854,1847480,7683155,9831471,753423,True,0.5,4,1000000

@@ -1,0 +1,3 @@
+held_out,known_macro_f1,unknown_rejection_rate,known_false_rejection_rate,coverage
+"Worms, Analysis, Shellcode",0.916807702922175,1.0,0.052020612619936825,0.9464705074141011
+"Backdoor, DoS, Fuzzers",0.997938132541661,0.9592846698909009,0.020508666635070682,0.9618482936470191

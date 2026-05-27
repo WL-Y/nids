@@ -1,0 +1,111 @@
+# Data and EDA Notes
+## Dataset Version
+NF-UQ-NIDS-v3 collection.
+Main dataset: NF-UNSW-NB15-v3
+Shape: 2,365,424 rows x 55 columns
+Memory: 1401.1 MB
+
+## Target Columns
+- `Attack`: multi-class target (10 classes)
+- `Label`: binary label (0=Benign, 1=Attack)
+
+## Class Distribution
+| Class | Count | Percentage |
+|-------|-------|------------|
+| Benign | 2,237,731 | 94.60% |
+| Exploits | 42,748 | 1.81% |
+| Fuzzers | 33,816 | 1.43% |
+| Generic | 19,651 | 0.83% |
+| Reconnaissance | 17,074 | 0.72% |
+| DoS | 5,980 | 0.25% |
+| Backdoor | 4,659 | 0.20% |
+| Shellcode | 2,381 | 0.10% |
+| Analysis | 1,226 | 0.05% |
+| Worms | 158 | 0.01% |
+
+## Missing Values
+| Column | Missing Count | Missing % | Decision |
+|--------|---------------|-----------|----------|
+| SRC_TO_DST_SECOND_BYTES | 63,425 | 2.68% | Fill with median |
+
+## L7_PROTO Quality
+Non-integer values found: 23,866 (must be rounded before encoding)
+
+## Feature Statistics
+| Feature | Mean | Std | Min | Max | Skewness |
+|---------|------|-----|-----|-----|----------|
+| L4_SRC_PORT | 32660.520 | 19158.971 | 0.000 | 65535.000 | -0.012 |
+| L4_DST_PORT | 11148.406 | 18394.243 | 0.000 | 65535.000 | 1.586 |
+| IN_BYTES | 4413.591 | 67699.448 | 1.000 | 27020934.000 | 204.483 |
+| IN_PKTS | 35.282 | 78.393 | 1.000 | 20166.000 | 57.657 |
+| OUT_BYTES | 34320.028 | 155073.241 | 0.000 | 14656752.000 | 11.833 |
+| OUT_PKTS | 44.711 | 116.344 | 0.000 | 11024.000 | 11.231 |
+| TCP_FLAGS | 19.765 | 11.158 | 0.000 | 31.000 | -1.163 |
+| CLIENT_TCP_FLAGS | 19.486 | 11.073 | 0.000 | 31.000 | -1.124 |
+| SERVER_TCP_FLAGS | 19.362 | 11.110 | 0.000 | 31.000 | -1.087 |
+| FLOW_DURATION_MILLISECONDS | 579.766 | 3502.516 | 0.000 | 120948.000 | 26.290 |
+| DURATION_IN | 571.976 | 3499.045 | 0.000 | 120948.000 | 26.357 |
+| DURATION_OUT | 494.863 | 1896.200 | 0.000 | 120922.000 | 16.903 |
+| MIN_TTL | 40.098 | 44.269 | 0.000 | 255.000 | 4.562 |
+| MAX_TTL | 40.928 | 44.241 | 0.000 | 255.000 | 4.558 |
+| LONGEST_FLOW_PKT | 710.045 | 615.219 | 28.000 | 1508.000 | 0.186 |
+| SHORTEST_FLOW_PKT | 57.994 | 37.948 | 28.000 | 1508.000 | 20.507 |
+| MIN_IP_PKT_LEN | 53.627 | 12.533 | 0.000 | 680.000 | -0.164 |
+| MAX_IP_PKT_LEN | 710.045 | 615.219 | 28.000 | 1508.000 | 0.186 |
+| SRC_TO_DST_SECOND_BYTES | inf | nan | 0.000 | inf | nan |
+| DST_TO_SRC_SECOND_BYTES | inf | nan | 0.001 | inf | nan |
+| RETRANSMITTED_IN_BYTES | 1579.834 | 33818.107 | 0.000 | 13510379.000 | 205.084 |
+| RETRANSMITTED_IN_PKTS | 5.818 | 26.402 | 0.000 | 10081.000 | 182.193 |
+| RETRANSMITTED_OUT_BYTES | 16794.268 | 77374.551 | 0.000 | 7328208.000 | 11.871 |
+| RETRANSMITTED_OUT_PKTS | 15.836 | 54.415 | 0.000 | 5508.000 | 12.690 |
+| SRC_TO_DST_AVG_THROUGHPUT | 904745.694 | 1804868.205 | 11.000 | 36000000.000 | 5.186 |
+| DST_TO_SRC_AVG_THROUGHPUT | 2555652.985 | 4181821.056 | 0.000 | 23530666.000 | 1.955 |
+| NUM_PKTS_UP_TO_128_BYTES | 54.552 | 78.016 | 0.000 | 3840.000 | 5.138 |
+| NUM_PKTS_128_TO_256_BYTES | 1.646 | 5.271 | 0.000 | 298.000 | 11.891 |
+| NUM_PKTS_256_TO_512_BYTES | 1.437 | 7.197 | 0.000 | 2564.000 | 145.218 |
+| NUM_PKTS_512_TO_1024_BYTES | 1.479 | 6.940 | 0.000 | 642.000 | 11.106 |
+| NUM_PKTS_1024_TO_1514_BYTES | 23.111 | 109.990 | 0.000 | 17500.000 | 21.980 |
+| TCP_WIN_MAX_IN | 17154.163 | 16750.676 | 0.000 | 65533.000 | 1.225 |
+| TCP_WIN_MAX_OUT | 12118.671 | 10819.887 | 0.000 | 65531.000 | 1.752 |
+| SRC_TO_DST_IAT_MIN | 5.734 | 253.060 | 0.000 | 60598.000 | 59.511 |
+| SRC_TO_DST_IAT_MAX | 219.938 | 863.315 | 0.000 | 60598.000 | 16.878 |
+| SRC_TO_DST_IAT_AVG | 24.543 | 267.487 | 0.000 | 30299.000 | 39.241 |
+| SRC_TO_DST_IAT_STDDEV | 45.314 | 201.396 | 0.000 | 30299.000 | 56.086 |
+| DST_TO_SRC_IAT_MIN | 0.006 | 1.713 | 0.000 | 1490.000 | 500.520 |
+| DST_TO_SRC_IAT_MAX | 213.022 | 753.750 | 0.000 | 60598.000 | 14.702 |
+| DST_TO_SRC_IAT_AVG | 16.727 | 62.963 | 0.000 | 20199.000 | 110.750 |
+| DST_TO_SRC_IAT_STDDEV | 41.020 | 127.477 | 0.000 | 28566.000 | 51.163 |
+
+## High Correlation Pairs (|r| > 0.85)
+- IN_BYTES <-> RETRANSMITTED_IN_BYTES: r = 0.9992
+- IN_BYTES <-> RETRANSMITTED_IN_PKTS: r = 0.9705
+- IN_PKTS <-> NUM_PKTS_1024_TO_1514_BYTES: r = 0.8581
+- OUT_BYTES <-> OUT_PKTS: r = 0.9707
+- OUT_BYTES <-> RETRANSMITTED_OUT_BYTES: r = 1.0000
+- OUT_BYTES <-> RETRANSMITTED_OUT_PKTS: r = 0.9917
+- OUT_BYTES <-> NUM_PKTS_1024_TO_1514_BYTES: r = 0.9175
+- OUT_PKTS <-> RETRANSMITTED_OUT_BYTES: r = 0.9696
+- OUT_PKTS <-> RETRANSMITTED_OUT_PKTS: r = 0.9912
+- OUT_PKTS <-> NUM_PKTS_UP_TO_128_BYTES: r = 0.8637
+- OUT_PKTS <-> NUM_PKTS_1024_TO_1514_BYTES: r = 0.9129
+- TCP_FLAGS <-> CLIENT_TCP_FLAGS: r = 0.9913
+- TCP_FLAGS <-> SERVER_TCP_FLAGS: r = 0.9866
+- CLIENT_TCP_FLAGS <-> SERVER_TCP_FLAGS: r = 0.9768
+- FLOW_DURATION_MILLISECONDS <-> DURATION_IN: r = 0.9996
+- MIN_TTL <-> MAX_TTL: r = 0.9999
+- LONGEST_FLOW_PKT <-> MAX_IP_PKT_LEN: r = 1.0000
+- SRC_TO_DST_SECOND_BYTES <-> DST_TO_SRC_AVG_THROUGHPUT: r = 0.9957
+- DST_TO_SRC_SECOND_BYTES <-> SRC_TO_DST_AVG_THROUGHPUT: r = 0.9820
+- RETRANSMITTED_IN_BYTES <-> RETRANSMITTED_IN_PKTS: r = 0.9657
+- RETRANSMITTED_OUT_BYTES <-> RETRANSMITTED_OUT_PKTS: r = 0.9912
+- RETRANSMITTED_OUT_BYTES <-> NUM_PKTS_1024_TO_1514_BYTES: r = 0.9168
+- RETRANSMITTED_OUT_PKTS <-> NUM_PKTS_1024_TO_1514_BYTES: r = 0.9070
+- SRC_TO_DST_IAT_MIN <-> SRC_TO_DST_IAT_AVG: r = 0.8881
+- SRC_TO_DST_IAT_MAX <-> DST_TO_SRC_IAT_MAX: r = 0.8577
+- DST_TO_SRC_IAT_AVG <-> DST_TO_SRC_IAT_STDDEV: r = 0.9081
+
+## Implications for Modeling
+- Accuracy is insufficient — Macro-F1 and per-class recall are primary metrics.
+- Minority classes (Worms, Analysis, Shellcode) require special attention.
+- Use class_weight / sample_weight, not SMOTE as default.
+- High correlation pairs may be candidates for Stress C feature dropout analysis.

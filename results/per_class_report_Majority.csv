@@ -1,0 +1,13 @@
+class,precision,recall,f1,support
+Analysis,0.0,0.0,0.0,245
+Backdoor,0.0,0.0,0.0,932
+Benign,0.946,1.0,0.9723,447546
+DoS,0.0,0.0,0.0,1196
+Exploits,0.0,0.0,0.0,8550
+Fuzzers,0.0,0.0,0.0,6763
+Generic,0.0,0.0,0.0,3930
+Reconnaissance,0.0,0.0,0.0,3415
+Shellcode,0.0,0.0,0.0,476
+Worms,0.0,0.0,0.0,32
+macro avg,0.0946,0.1,0.0972,473085
+weighted avg,0.8949,0.946,0.9198,473085

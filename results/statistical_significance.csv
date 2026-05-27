@@ -1,0 +1,3 @@
+model,condition,metric,mean,std,n_runs,seeds
+RandomForest,Clean,macro_f1,0.6464,0.0036,5,42;123;456;789;1111
+RandomForest,Stress_A,macro_f1,0.7215,0.0034,5,42;123;456;789;1111

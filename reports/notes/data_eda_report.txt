@@ -1,0 +1,46 @@
+Dataset EDA Report
+==================
+Generated: Phase 2a
+
+Dataset: NF-UNSW-NB15-v3 (NF-UQ-NIDS-v3 collection)
+Shape: 2,365,424 rows x 55 columns
+Memory: 1401.1 MB
+
+Target Columns:
+  - Attack: multi-class target (10 classes) — main classification target
+  - Label:  binary label (0=Benign, 1=Attack) — auxiliary binary evaluation
+
+Class Distribution (10 classes):
+  Benign:          2,237,731 (94.60%)
+  Exploits:           42,748 (1.81%)
+  Fuzzers:            33,816 (1.43%)
+  Generic:            19,651 (0.83%)
+  Reconnaissance:     17,074 (0.72%)
+  DoS:                 5,980 (0.25%)
+  Backdoor:            4,659 (0.20%)
+  Shellcode:           2,381 (0.10%)
+  Analysis:            1,226 (0.05%)
+  Worms:                 158 (0.01%)
+
+Missing Values:
+  SRC_TO_DST_SECOND_BYTES: 63,425 (2.68%) — fill with median
+  All other columns: 0 missing
+
+L7_PROTO Quality:
+  Non-integer values found: 23,866 (rounded to integers before encoding)
+
+Inf Values:
+  SRC_TO_DST_SECOND_BYTES and DST_TO_SRC_SECOND_BYTES contain inf values
+  (replaced with NaN, then median-imputed)
+
+Modeling Features: 49 (after removing 4 ID columns + 2 label columns)
+  - Numeric (regular):   41
+  - Numeric (protocol):   6 (ICMP_TYPE, ICMP_IPV4_TYPE, DNS_*, FTP_*)
+  - Categorical:          2 (PROTOCOL, L7_PROTO)
+
+Rare-Class Warning:
+  Worms (158 samples) is extremely rare and may be unstable for evaluation.
+
+Feature Columns Saved: data/metadata/feature_columns.json
+Common Features (UNSW/CICIDS): data/metadata/common_features_unsw_cicids.json
+  Result: Feature sets are identical (49/49 common)

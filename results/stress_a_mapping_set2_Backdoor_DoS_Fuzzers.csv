@@ -1,0 +1,10 @@
+held_out_class,held_out_count,rank,predicted_as,count
+Backdoor,932,1,Exploits,613
+Backdoor,932,2,Reconnaissance,169
+Backdoor,932,3,Generic,114
+DoS,1196,1,Exploits,918
+DoS,1196,2,Reconnaissance,136
+DoS,1196,3,Generic,69
+Fuzzers,6763,1,Exploits,4265
+Fuzzers,6763,2,Reconnaissance,1870
+Fuzzers,6763,3,Generic,394

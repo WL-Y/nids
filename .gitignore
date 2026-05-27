@@ -1,0 +1,6 @@
+__pycache__/
+*.pyc
+
+# Exclude entire artifacts and data folders
+artifacts/
+data/

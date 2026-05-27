@@ -1,0 +1,11 @@
+Stress B results are computed on the full NF-CSE-CIC-IDS2018-v3 target domain
+(20,115,529 flows) using chunked evaluation. The target dataset is processed in
+chunks; each chunk is cleaned, transformed using the UNSW-fitted preprocessor
+(transform only, never fit), and predicted. Binary TP/TN/FP/FN counts are
+accumulated across all chunks.
+
+Strategy 2 Stress B uses binary majority voting over five ensemble members
+(3x RandomForest, 1x XGBoost, 1x LogisticRegression). All five models are
+kept in memory; the full CICIDS target dataset is streamed once in chunks.
+For each chunk, all five models predict, binary majority vote is computed
+(>= 3 votes for attack), and detection counts are accumulated.

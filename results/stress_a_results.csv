@@ -1,0 +1,3 @@
+held_out_classes,known_macro_f1,unknown_mean_conf,known_correct_mean_conf,known_wrong_mean_conf,auroc_confidence_unknown
+"Worms, Analysis, Shellcode",0.7037,0.5442,0.9908,0.5653,0.987
+"Backdoor, DoS, Fuzzers",0.7913,0.6321,0.9966,0.5767,0.9832

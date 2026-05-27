@@ -1,0 +1,17 @@
+final_file,source_file,reason
+01_class_distribution.png,reports/figures/class_distribution.png,selected for final report
+02_l7_proto_quality.png,reports/figures/l7_proto_quality.png,selected for final report
+03_baseline_macro_f1_comparison.png,reports/figures_improved/baseline_macro_f1_comparison.png,selected for final report
+04_random_forest_per_class_f1.png,reports/figures_improved/random_forest_per_class_f1.png,selected for final report
+08_stress_b_full_binary_metrics.png,reports/figures_improved/stress_b_full_binary_metrics.png,selected for final report
+09_stress_b_full_binary_confusion.png,reports/figures_improved/stress_b_full_binary_confusion.png,selected for final report
+10_stress_c_degradation_by_type.png,reports/figures_improved/stress_c_degradation_by_type.png,selected for final report
+11_strategy_comparison_key_metrics.png,reports/figures_improved/strategy_comparison_key_metrics.png,selected for final report
+12_strategy1_coverage_accuracy_curve.png,reports/figures/coverage_accuracy_curve.png,selected for final report
+13_strategy2_disagreement_auroc.png,reports/figures/disagreement_auroc.png,selected for final report
+14_ablation_threshold_tradeoff.png,reports/figures_improved/ablation_threshold_tradeoff.png,selected for final report
+15_ablation_ensemble_and_imbalance.png,reports/figures_improved/ablation_ensemble_and_imbalance.png,selected for final report
+06_stress_a_full_confusion_normalized_set1.png,reports/figures_improved/stress_a_full_confusion_normalized_set1_Worms_Analysis_Shellcode.png,row-normalized confusion matrix for Stress A
+07_stress_a_full_confusion_normalized_set2.png,reports/figures_improved/stress_a_full_confusion_normalized_set2_Backdoor_DoS_Fuzzers.png,row-normalized confusion matrix for Stress A
+05a_stress_a_metrics_and_confidence_with_values.png,results/stress_a_results.csv,Stress A metrics and confidence values with direct numeric labels
+05b_stress_a_unknown_mapping_with_counts.png,results/stress_a_mapping_set*.csv,Stress A unknown mapping with counts and percentages on bars
